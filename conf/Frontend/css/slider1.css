@@ -1,0 +1,206 @@
+.pieces-slider {
+	position: relative;
+	text-align: center;
+	padding: 8rem 0;
+}
+
+.js .pieces-slider {
+	padding: 0;
+}
+
+/* Make all slides absolutes and hide them */
+.js .pieces-slider__slide {
+	position: absolute;
+	right: 100%;
+}
+
+/* Define image dimensions and also hide them */
+.pieces-slider__image {
+	max-width: 600px;
+	max-height: 400px;
+}
+
+.js .pieces-slider__image {
+	visibility: hidden;
+}
+
+/* Hide the titles */
+.js .pieces-slider__text {
+	text-indent: -9999px;
+}
+
+/* Canvas with viewport width and height */
+.js .pieces-slider__canvas {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	transition: 0.2s opacity;
+}
+
+/* Class for when we resize */
+.pieces-slider__canvas--hidden {
+	opacity: 0;
+	transition-duration: 0.3s;
+}
+
+/* Navigation buttons */
+.pieces-slider__button {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	margin: -25px 0 0 0;
+	background-color: #5104ab;
+	color: #fff;
+	font-family: inherit;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	transition: 0.1s background-color;
+}
+
+.pieces-slider__button:hover {
+	background: #5f3abf;
+}
+
+.pieces-slider__button--next {
+	left: auto;
+	right: 0;
+}
+
+/* Hide the buttons when no JS */
+.no-js .pieces-slider__button {
+	display: none;
+}
+
+/* Media queries with styles for smaller screens */
+@media screen and (max-width: 720px) {
+	.pieces-slider__image {
+		max-width: 300px;
+	}
+}
+
+@media screen and (max-width: 55em) {
+	.pieces-slider__canvas {
+		width: 100%;
+		height: 100vw;
+	}
+	.pieces-slider__button {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+
+
+
+
+.box {
+	/* Choose the animation */
+	animation-name: movingBox;
+
+	/* The animation’s duration */
+	animation-duration: 1900ms;
+
+  /* The number of times we want
+  the animation to run */
+  animation-iteration-count: infinite;
+
+  /* Causes the animation to reverse
+  on every odd iteration */
+  animation-direction: alternate;
+}
+
+@keyframes movingBox {
+	0% {
+		transform: translate(50px, 5px);
+    /*
+    opacity: 0.3;
+    */
+}
+
+25% {
+	transform: translate(5px, 25px);
+	
+}
+
+50% {
+	transform: translate(25px, 5px);
+	
+}
+
+100% {
+	transform: translate(5px, 25px);
+    /*
+    opacity: 0.3;
+    */
+}
+
+
+/*
+  25% {
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: translate(100px, 100px);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translate(30px, 30px);
+    opacity: 0.8;
+  }
+  */
+}
+
+.avatar {
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	box-shadow:
+	inset 0 0 0 2px rgba(255,255,255,0.6), 
+	0 1px 1px rgba(0,0,0,0.1);
+	background-color: transparent !important;
+	z-index: 999;
+	margin-top: -5px;
+	margin-bottom: -3px;
+	
+}
+
+.avatar img {
+	border-radius: inherit;
+	width: inherit;
+	height: inherit;
+	display: block;
+	position: relative;
+	z-index: 998;
+
+}
+
+.avatar2 {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	box-shadow:
+	inset 0 0 0 2px rgba(255,255,255,0.6), 
+	0 1px 1px rgba(0,0,0,0.1);
+	background-color: transparent !important;
+	z-index: 999;
+	margin-top: -5px;
+	margin-bottom: -3px;
+
+	
+}
+
+.avatar2 img {
+	border-radius: inherit;
+	width: inherit;
+	height: inherit;
+	display: block;
+	position: relative;
+	z-index: 998;
+
+}
+
